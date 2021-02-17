@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout01</title>
+    <style>
+        /* 기본태그이기 때문에 그냥 작성 */
+        /* ie8 버전 이하는 호환x */
+        body {background: #c8e6c9;}
+        #wrap {width: 1000px; height: 900px; margin: 0 auto;}
+        header {width: 1000px; height: 100px; background: #2e7d32;}
+        nav {width: 1000px; height: 100px; background: #388e3c; }
+        aside {float: left; width: 300px; height: 600px; background: #43a047;}
+        section {float: left; width: 700px; height: 600px; background: #4caf50;}
+        footer {float: left; width: 1000px; height: 100px; background: #66bb6a;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 시멘틱 태그 -->
+        <header></header>
+        <nav></nav> <!-- footer 영역 링크를 nav 태그에 사용하지 않는다. -->
+        <aside></aside> <!--side--> <!-- 메인 콘텐츠와 관련된 정보, 광고 등 부분적인 정보를 그룹화 -->
+        <section></section> <!--contents--> <!-- 주제별 그룹의 콘텐츠 섹션을 정의 -->
+        <!-- 탭 페이지, 홈페이지의 소개, 연락처, 뉴스항목 등 -->
+        <!-- 제목을 나타내는 <h1>~<h6> 태그가 포함되어야 한다. -->
+        <!-- 스크립트의 편의나 영역을 위함이라면 div 를 사용 -->
+        <!-- 하나의 주제를 나타냄 -->
+        <!-- article 요소 안에 사용 가능 -->
+        <footer></footer>
+        <!-- <article> : 포럼, 게시판 글 등 콘텐츠의 독립적인 항목을 나타냄
+            주제를 묶는 독립적인 콘텐츠를 나타냄
+            section 요소 안에 사용 가능 -->
+    </div>
+</body>
+</html>

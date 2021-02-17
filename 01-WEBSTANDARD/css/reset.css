@@ -34,6 +34,9 @@
     /* 테두리 초기화 */
     img, fieldset {border:0 none;}
 
+    /* 버튼 초기화 */
+    button {border: 0;}
+
     /* margin, padding */ /* !important 우선순위 */
     /* 원본 소스를 해치지 않고 빠르게 작업하기 위해 미리 만들어 둠 */
     .mt10 {margin-top: 10px !important;}
