@@ -1,0 +1,14 @@
+    header .top {margin: 0 auto; width: 1200px;}
+    header .top h1 {float: left; padding: 33px 0 0;}
+    header .top h1 a:first-child {margin-right: 28px;} /* padding : 클릭 범위가 넓어짐 */
+    header .top > div {float: right;}
+    header .control {float: left; padding: 31px 24px 0 0;}
+    header .control h2 {float: left; font-size: 16px; color: #333; font-weight: normal; line-height: 36px;} /* block 요소 */
+    header .control ul {float: left; padding: 0 0 0 9px;} /* block 요소 */
+    header .control li {float: left; padding: 0 0 0 4px;} /* block 요소 */
+    header .control li button[class] {padding: 0;} /* 패딩 제거*/
+    header .control li button {padding: 0 16px; min-width: 36px; height: 36px; font-size: 14px; color:#3190ce; background: #fff; border: 1px solid #dfdfdf; border-radius: 36px; box-sizing: border-box;} /* radius : 높이만큼 */ /* box-sizing: border-box : 자동계산 */
+    header .sns {float: left; position: relative; padding: 27px 0 0 7px;}
+    header .sns:before {content: ""; position: absolute; }
+    header .sns li {float: left; padding: 0 0 0 12px;}
+    header .sns img {width: 46px;}
