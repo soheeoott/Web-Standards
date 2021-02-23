@@ -1,14 +1,56 @@
-    header .top {margin: 0 auto; width: 1200px;}
+    header .top {margin: 0 auto; width: 1200px; padding: 0 0 26px;}
     header .top h1 {float: left; padding: 33px 0 0;}
-    header .top h1 a:first-child {margin-right: 28px;} /* padding : 클릭 범위가 넓어짐 */
+    header .top h1 a:first-child {margin-right: 28px;} /* padding = 클릭 범위가 넓어짐 */
     header .top > div {float: right;}
     header .control {float: left; padding: 31px 24px 0 0;}
     header .control h2 {float: left; font-size: 16px; color: #333; font-weight: normal; line-height: 36px;} /* block 요소 */
     header .control ul {float: left; padding: 0 0 0 9px;} /* block 요소 */
     header .control li {float: left; padding: 0 0 0 4px;} /* block 요소 */
     header .control li button[class] {padding: 0;} /* 패딩 제거*/
-    header .control li button {padding: 0 16px; min-width: 36px; height: 36px; font-size: 14px; color:#3190ce; background: #fff; border: 1px solid #dfdfdf; border-radius: 36px; box-sizing: border-box;} /* radius : 높이만큼 */ /* box-sizing: border-box : 자동계산 */
+    header .control li button {
+        padding: 0 16px; min-width: 36px; height: 36px; font-size: 14px; color:#3190ce; background: #fff; 
+        border: 1px solid #dfdfdf; border-radius: 36px; box-sizing: border-box;
+        /* radius = 높이(height)만큼 */ /* box-sizing: border-box = 자동계산 */
+    }
     header .sns {float: left; position: relative; padding: 27px 0 0 7px;}
-    header .sns:before {content: ""; position: absolute; }
+    header .sns:before {content: ""; position: absolute; left: 0; top: 35px; width: 1px; height: 30px; background: #e3e3e3;}
     header .sns li {float: left; padding: 0 0 0 12px;}
-    header .sns img {width: 46px;}
+    header .sns li img {width: 46px;}
+    header .btm {border-top: 1px solid #ededed; border-bottom: 1px solid #ededed;}
+    header .btm > div {margin: 0 auto; width: 1200px;}
+    header .btm .lnb {float: left;}
+    header .btm .lnb li {float: left;}
+    header .btm .lnb a {display: block; line-height: 59px; padding: 0 40px; color: #333; font-size: 22px;}
+    header .btm .spot {float: right; font-size: 0; /* block 사이의 공백 없애기 */}
+    header .btm .spot * {vertical-align: middle;} /* button 과 a 태그를 정렬 */
+    header .btm .spot a {
+        display: inline-block; 
+        position: relative; /* spot a ~ a:before = 기준점 */
+        padding: 0 25px; line-height: 59px; font-size: 15px; color: #666;
+    }
+    header .btm .spot a ~ a:before {content: ""; position: absolute; left: 0; top:50%; width: 1px; height: 10px; background: #e3e3e3; transform: translateY(-50%);}
+    header .btm .spot button {width: 59px; height: 59px; background: none; color: #0066b3; font-size: 26px; /* \e97a */}
+    
+    .block > div {margin: 0 auto; padding: 100px 0 0; width: 1200px;}
+    .block .tit {text-align: center;}
+    .block .tit h2 {padding: 28px 0; font-size: 38px; color:#333; line-height: 1;} /* line-height: 1 = 수치를 알기 위해 줄간격 초기화 */
+    .block .tit p {padding: 0 0 40px; font-size: 21px; color:#666; line-height: 1;}
+    
+    /* 금융서비스 */    
+    .service .banner h3 {font-size: 24px; line-height: 31px;}
+    .service .banner p {padding: 12px 0 15px; font-size: 13px; line-height: 24px;}
+    .service .banner a {
+        display: block; width: 140px; line-height: 40px; background: #064ca2; border-radius: 7px; color:#fff; margin: 0 auto; /* block 요소 */ 
+    }
+
+    .service .banner > div {width: 580px; color: #fff;}
+    .service .banner div div {
+        width: 290px; height: 280px; padding: 37px 0 0; 
+        box-sizing: border-box; /* 높이 계산 */
+        text-align: center;
+    }
+    .service .banner .left {float: left; background: url(../img/bg_ad2.png) no-repeat left top} /* left top = 기본값 */
+    .service .banner .left div {float: right; background: linear-gradient(to right, #3194d5, #4fb2f6);}
+    .service .banner .right {float: right; background: url(../img/bg_ad1.png) no-repeat right top}
+    .service .banner .right div {background: linear-gradient(to right, #334da4, #3c62b3);}
+    

@@ -5,13 +5,13 @@
     <title>우리은행 시니어플러스</title>
     
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <link rel="stylesheet" href="css/default01.css">
+    <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <a href="#content" class="skip">본문바로가기</a> <!-- 스킵 nav -->
     <header>
-        <div class="top">
+        <div class="top clear"> <!-- clear 로 float 영향을 받는 영역 해결 -->
             <h1>
                 <a href=""><img src="img/original_logo.png" alt="우리은행"></a><a href="#a"><img src="img/logo.png" alt="시니어플러스"></a>
             </h1>
@@ -39,6 +39,54 @@
                 </ul>
             </div>
         </div>
+        
+        <div class="btm">
+            <div class="clear"> <!-- 상위 부모 영역의 float 영향 -->
+                <nav class="lnb">
+                    <ul>
+                        <li><a href="">금융서비스</a></li>
+                        <li><a href="">관심정보</a></li>
+                        <li><a href="">교육/세미나</a></li>
+                        <li><a href="">여행/쇼핑</a></li>
+                        <li><a href="">일자리정보</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="spot">
+                    <a href="">로그인</a>
+                    <a href="">회원가입</a>
+                    <button class="xi-search"><span class="hide">검색</span></button>
+                </div>
+            </div>
+        </div>
     </header>
+    
+    <main>
+        <section class="block service"> <!-- block = 공통 -->
+            <div>
+                <div class="tit">
+                    <h2>금융서비스</h2>
+                    <p>은퇴준비가 걱정되시나요? 지금 바로 은퇴설계시스템을 통해 은퇴준비 상태를 점검하세요!</p>
+                </div>
+                
+                <div class="banner clear">
+                    <div class="left">
+                        <div>
+                            <h3>고객맞춤<br>은퇴설계</h3>
+                            <p>현재 은퇴준비 상태 점검<br>미래 필요자금 계산<br>포트폴리오제안</p>
+                            <a href="#">바로가기</a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div>
+                            <h3>시니어플러스<br>우리통장</h3>
+                            <p>우대금리, 수수료면제,<br>무료보이스피싱보험, 온천무료이용권, <br>헬스케어서비스등</p>
+                            <a href="#">바로가기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
