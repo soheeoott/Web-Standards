@@ -256,3 +256,216 @@
             .blog1 .img-retina {display: initial;}
             .blog1 .img-normal {display: none;}
     }
+    
+    /* 블로그2 */
+    .blog2 h5 {color: #fff; text-align: center; padding: 30px 30px; text-transform: uppercase;}
+    .blog2 p {padding-top: 5px;}
+    .blog2 .img-retina {
+        background-image: url(../img/blog4_@1.jpg);
+        background-size: cover; /* 가로 세로 딱 맞게 */
+    }
+    
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 2dppx) {
+            .blog2 .img-retina {background-image: url(../img/blog4_@2.jpg);}
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+        only screen and (min-device-pixel-ratio: 3),
+        only screen and (min-resolution: 3dppx) {
+            .blog2 .img-retina {background-image: url(../img/blog4_@3.jpg);}
+    }
+
+    /* 이미지 슬라이드 */
+    .slider figure {
+        position: relative; /* slider figcaption = 기준점 */
+    }
+    .slider figcaption {
+        position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px;
+        box-sizing: border-box;
+        background-color: rgba(0,0,0,0.5);
+        color: #fff;
+        font-size: 18px;
+    }
+    .slider figcaption em {
+        display: block; font-weight: bold; font-size: 28px;
+        text-transform: uppercase; font-family: 'Abel', sans-serif;
+        opacity: 0;
+        transition: all .84s ease;
+        transform: translateX(50px); /* 왼 -> 오 */
+    }
+    .slider figcaption span {
+        display: block; 
+        overflow: hidden; text-overflow: ellipsis; white-space: nowrap; /* 한줄효과 */
+        opacity: 0;
+        transition: all .84s 0.2s ease;
+        transform: translateX(50px);
+    }
+    .slider .slick-active figcaption em {opacity: 1; transform: translateX(0);}
+    .slider .slick-active figcaption span {opacity: 1; transform: translateX(0);}
+    .slider .slick-dots {display: block; width: 100%; text-align: center;}
+    .slider .slick-dots li {display: inline-block; width: 15px; height: 15px; margin: 5px;}
+    .slider .slick-dots li button {
+        display: block; font-size: 0; line-height: 0;
+        width: 15px; height: 15px; cursor: pointer;
+        background: #5dbfeb;
+        border-radius: 50%;
+    }
+    .slider .slick-dots li.slick-active button {background: #2b91c8;}
+    .slider .slick-prev {
+        position: absolute; left: 0; bottom: 0; z-index: 1000;
+        width: 30px; height: 30px;
+        display: inline-block; /* 안먹음 */
+        text-indent: -9999px; /* 글씨 없애기 */
+        font: normal normal normal 14px/1 FontAwesome; 
+        /* FontAwesome 설정 = 14px/1(line-height) */
+    }
+    .slider .slick-prev::before {
+        content: "\f053";
+        color: #5dbfeb;
+        text-indent: 0; /* 글씨 없애기 */
+        position: absolute; left: 9px; top: 8px;
+    }
+    .slider .slick-next {
+        position: absolute; right: 0; bottom: 0; z-index: 1000;
+        width: 30px; height: 30px;
+        display: inline-block; /* 안먹음 */
+        text-indent: -9999px; /* 글씨 없애기 */
+    }
+    .slider .slick-next::before { 
+        content: "\f054";
+        color: #5dbfeb;
+        text-indent: 0;
+        position: absolute; left: 11px; top: 8px;
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+    
+    /* 라이트 박스 */
+    .square a {position: relative; overflow: hidden; float: left; width: 19%; margin: 0.5%;}
+    .square a img {width: 100%; display: block;}
+    .square em {
+        background: rgba(0,0,0,0.77); color: #fff; width: 100%; text-align: center; 
+        position: absolute; left: 0; bottom: -30px; 
+        opacity: 1; transition: all .3s ease;
+    }
+    .square a:hover em {
+        bottom: 0; background: rgba(0,0,0,0.57);
+    }
+    .square a:nth-child(1):hover img {filter: blur(2px);}
+    .square a:nth-child(2):hover img {filter: brightness(50%);}
+    .square a:nth-child(3):hover img {filter: contrast(10%);}
+    .square a:nth-child(4):hover img {filter: grayscale(100%);}
+    .square a:nth-child(5):hover img {filter: hue-rotate(120deg);}
+    .square a:nth-child(6):hover img {filter: invert(100%);}
+    .square a:nth-child(7):hover img {filter: opacity(10%);}
+    .square a:nth-child(8):hover img {filter: saturate(10%);}
+    .square a:nth-child(9):hover img {filter: sepia(120%);}
+    .square a:nth-child(10):hover img {filter: sepia(120%) hue-rotate(120deg);} /* 혼합 */
+    
+    /* 비디오 */
+    .video {
+        position: relative; width: 100%; 
+        padding-bottom: 56.25%; /* 가상으로 패딩값을 주어서 영역 잡기 */ 
+    }
+    .video iframe {position: absolute; width: 100%; height: 100%;}
+
+    /* 푸터 */
+    .footer {text-align: center; padding: 30px 50px;}
+    .footer li {position: relative; display: inline-block; padding: 0 7px 0 10px; white-space: nowrap;}
+    .footer li:before {content: ''; width: 1px; height: 12px; background-color: #dbdbdb; position: absolute; left: 0; top: 2px;}
+    .footer li:first-child:before {width: 0;}
+    .footer address {padding-top: 15px;}
+
+    /* 사이드 이펙트1 */
+    .side1 {
+        position: relative; 
+        perspective: 600px; /* 원근점 */
+        display: block;
+    } 
+    .side1 .front {
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        transition: all 0.5s ease-in-out;
+        backface-visibility: hidden; /* 뒷면 감추기 */
+    }
+    .side1 .back {
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%; z-index: -1; /* 감추기 */
+        transform-style: preserve-3d;
+        color: #fff;
+        background: #4038dc;
+        transform: rotateY(-180deg); /* 회전 */
+        transition: all 0.5s ease-in-out;
+        backface-visibility: hidden;
+    }
+    .side1 .back i {
+        position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%, -50%); /* 중앙 정렬 */
+        font-size: 60px;
+    }
+    .side1:hover .front {transform: rotateY(180deg);}
+    .side1:hover .back {transform: rotateY(0deg); z-index: 1;}
+    
+    /* 사이드 이펙트2 */
+    .side2 {
+        position: relative; display: block; perspective: 600px;
+    }
+    .side2 figcaption {
+        width: 60%;
+        color: #fff; font-size: 20px; font-family: 'Abel', sans-serif; font-weight: bold; background: rgba(0,0,0,0.4); padding: 3px 10px;
+    }
+    .side2 .front {
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        transition: all 0.5s ease-in-out;
+        backface-visibility: hidden;
+    }
+    .side2 .front figcaption {
+        position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%, -50%) translateZ(100px);
+        display: block;
+        text-align: center;
+    }
+    .side2 .back {
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%; z-index: -1;
+        transform-style: preserve-3d;
+        transform: rotateY(-180deg);
+        transition: all 0.5s ease-in-out;
+        backface-visibility: hidden;
+    }
+    .side2 .back figcaption {
+        position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%, -50%) translateZ(100px);
+        display: block;
+        text-align: center;
+    }
+    .side2:hover .front {transform: rotateY(180deg);}
+    .side2:hover .back {transform: rotateY(0deg); z-index: 1;}
+    
+    /* 사이드 이펙트3 */
+    .side3 {position: relative; overflow: hidden; background: #fff;}
+    .side3 figcaption {
+        position: absolute; top: 50%; left: 50%; 
+        text-align: center; color: #fff; 
+        opacity: 0;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        transform: translate(350%, -50%) rotate(180deg); 
+        /* 오른쪽 */ /* 180 한바퀴 */
+    }
+    .side3 figcaption:after {
+        content: '';
+        width: 100px; height: 100px;
+        background: #000; border-radius: 50%;
+        position: absolute; left: 50%; top: 50%; z-index: -1;
+        transform: translate(-50%, -50%); /* 중앙 정렬 */
+    }
+    .side3 figcaption h3 {font-size: 16px;}
+    .side3 figcaption em {display: block; font-weight: bold;}
+    .side3 img {display: block;}
+    .side3:hover img {opacity: 0.4; transition: all 0.3s ease;}
+    .side3:hover figcaption {
+        transform: translate(-50%, -50%) rotate(0deg); opacity: 1; 
+        /* 가운데 */
+    }
