@@ -53,4 +53,74 @@
     .service .banner .left div {float: right; background: linear-gradient(to right, #3194d5, #4fb2f6);}
     .service .banner .right {float: right; background: url(../img/bg_ad1.png) no-repeat right top}
     .service .banner .right div {background: linear-gradient(to right, #334da4, #3c62b3);}
+
+    .service .btm > article {position: relative; width: 580px; margin: 38px 0 0; /* absolute 영향 */}
+    .service .btm h3 {padding: 0 0 28px; font-size: 26px; color: #333;}
+    .service .event {float: left;}
+    .service .event img {width: 100%;}    
+    .service .recom {float: right;}
+    .service .card_info > div {float: left;}
+    .service .card_info .card {
+        position: relative; 
+        font-size: 0; /* 중간의 공간 제거 */
+    }
+    .service .card_info .card div {
+        position: absolute; 
+        left: 0; right: 0; bottom: 0; /* 가로 사이즈 100% */
+        background: rgba(255,255,255,0.8);
+    }
+    .service .card_info .card div:before {
+        content: '';
+        position: absolute; left: 50%; height: 100%;
+        width: 1px; background: #bfc0c2;
+    }
+    .service .card_info .card button {
+        width: 50%; height: 45px;
+        background: none;
+        font-size: 15px; color: #666;
+        cursor: pointer;
+    }    
+    .service .info {
+        padding: 0 0 0 35px; width: 295px;
+        float: right;
+    }
+    .service .info h4 {
+        font-size: 26px; color: #333; 
+        line-height: 1; /* 줄 간격 초기화 */
+    }
+    .service .info p {position: relative; padding: 36px 0 0 0; font-size: 18px; color: #666; letter-spacing: -0.5px;}
+    .service .info p:before {
+        content: ''; position: absolute; left: 0; top: 21px;
+        width: 36px; height: 2px; background: #288bcc;
+    }
+    
+    .service .slide2 {
+        border-top: 2px solid #333; padding: 20px 0 0;
+        height: 224px; box-sizing: border-box;
+    }
+    .service .slide2 .control {
+        position: absolute; left: 256px; bottom: 0;
+        z-index: 100;
+    }
+    .service .slide2 .control button {
+        width: 75px; height: 35px; cursor: pointer; 
+    }
+    .service .slide2 .control button ~ button {
+        border-left: 1px solid #ddd;    
+    }
+    .service .slide2 .control button.prev {
+        background: url(../img/sArrow_prev.png) no-repeat center;
+    }
+    .service .slide2 .control button.next {
+        background: url(../img/sArrow_next.png) no-repeat center;    
+    }
+
+    .btn_more {
+        position: absolute; right: 0; top: 0;
+        width: 136px; line-height: 38px;
+        border: 1px solid #cdcdcd;
+        border-radius: 4px;
+        font-size: 16px; color:#8a8a8a; text-align: center;
+    }
+    .btn_more .xi-angle-right-thin {margin: 0 0 0 8px;}
     
