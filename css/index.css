@@ -2,6 +2,7 @@
     header .top h1 {float: left; padding: 33px 0 0;}
     header .top h1 a:first-child {margin-right: 28px;} /* padding = 클릭 범위가 넓어짐 */
     header .top > div {float: right;}
+
     header .control {float: left; padding: 31px 24px 0 0;}
     header .control h2 {float: left; font-size: 16px; color: #333; font-weight: normal; line-height: 36px;} /* block 요소 */
     header .control ul {float: left; padding: 0 0 0 9px;} /* block 요소 */
@@ -12,10 +13,12 @@
         border: 1px solid #dfdfdf; border-radius: 36px; box-sizing: border-box;
         /* radius = 높이(height)만큼 */ /* box-sizing: border-box = 자동계산 */
     }
+
     header .sns {float: left; position: relative; padding: 27px 0 0 7px;}
     header .sns:before {content: ""; position: absolute; left: 0; top: 35px; width: 1px; height: 30px; background: #e3e3e3;}
     header .sns li {float: left; padding: 0 0 0 12px;}
     header .sns li img {width: 46px;}
+
     header .btm {border-top: 1px solid #ededed; border-bottom: 1px solid #ededed;}
     header .btm > div {margin: 0 auto; width: 1200px;}
     header .btm .lnb {float: left;}
@@ -43,6 +46,7 @@
         display: block; width: 140px; line-height: 40px; background: #064ca2; border-radius: 7px; color:#fff; margin: 0 auto; /* block 요소 */ 
     }
 
+    .service {padding: 0 0 147px;}
     .service .banner > div {width: 580px; color: #fff;}
     .service .banner div div {
         width: 290px; height: 280px; padding: 37px 0 0; 
@@ -113,6 +117,67 @@
     }
     .service .slide2 .control button.next {
         background: url(../img/sArrow_next.png) no-repeat center;    
+    }
+    
+    /* 관심정보 */
+    .fav_info {background: #ccc; padding: 0 0 100px;}
+    .fav_info .left {width: 384px; float: left;}
+    .fav_info .left > a {
+        display: block; height: 65px; background: #3f69b8; border-radius: 5px; font-size: 19px; color: #fff; font-weight: bold; line-height: 65px; 
+        text-align: center; /* X축 가운데 정렬 */
+    }
+    .fav_info .left  > a span {color: #ffc820;}
+    .fav_info .left .thoumb {padding: 30px 0 0;}
+    .fav_info .left .thoumb img {width: 100%;}
+    .fav_info .left .thoumb p {position: relative; padding: 33px 0 22px; font-size: 15px; color:#288bcf; line-height: 1; margin: 0 0 20px;}
+    .fav_info .left .thoumb p:after {content: ''; position: absolute; left: 0; bottom: -1px; width: 36px; height: 1px; background: #288bcf;} /* p 요소는 여백이 없어서 여백 필요 */
+    .fav_info .left .thoumb span {font-size: 19px; color: #333; font-weight: bold;} /* 줄 간격 초기화 */
+
+    .fav_info .right {
+        float: right; width: 792px; 
+        /* float 줬을 시 부모 높이가 사라짐 - clear */
+    }
+    .tab_type1 {
+        display: flex; border: 1px solid #e4e4e4;
+        border-radius: 5px;
+    }
+    .tab_type1 li {flex: 1;} /* n/1 */
+    .tab_type1 li a {
+        display: block; background: #fff; font-size: 17px; color: #333; text-align: center; line-height: 62px;
+    }
+    .tab_type1 li a:hover {background: #f5f5f5; color: #288bcc;}
+    .tab_type1 li a:active {background: #f5f5f5;}
+    .tab_type1 li:first-child a {border-radius: 5px 0 0 5px;}
+    .tab_type1 li:last-child a {border-radius: 0px 5px 5px 0px;}
+    .tab_type1 li ~ li {border-left: 1px solid #e4e4e4;} /* 형제 선택자 */
+    .tab_type1 li:nth-child(1) a {} /* position: relative 로 위치 조정 */
+    .tab_type1 li:nth-child(2) a {}
+    .tab_type1 li:nth-child(3) a {}
+    .tab_type1 li:nth-child(4) a {}
+    .tab_type1 li:nth-child(5) a {}
+    
+    .info_list {margin: 30px 0 0; border-top: 2px solid #288bcc;}
+    .info_list li {border-bottom: 1px solid #eaeaea; background: #fff;}
+    .info_list li a {
+        position: relative; /* 기준점 */
+        display: block; /* 클릭 가능하게 */ 
+        line-height: 82px;
+        font-size: 19px;
+        color: #333;
+    }
+    .info_list li a:after {
+        content: "";
+        position: absolute; right: 0; top: 50%;
+        width: 26px; height: 26px; border-radius: 100%;
+        border: 1px solid #ddd; background: url(../img/sBtn_next.png) no-repeat center; transform: translateY(-50%);
+    }
+    .info_list li a strong {
+        display: inline-block; 
+        /* 가로 세로 배치 */
+        width: 130px;
+        padding: 0 0 0 30px;
+        font-size: 15px;
+        color: #288bcc;
     }
 
     .btn_more {
