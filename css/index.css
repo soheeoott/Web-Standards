@@ -68,17 +68,18 @@
         position: relative; 
         font-size: 0; /* 중간의 공간 제거 */
     }
-    .service .card_info .card div {
+    .btn_func {
         position: absolute; 
         left: 0; right: 0; bottom: 0; /* 가로 사이즈 100% */
         background: rgba(255,255,255,0.8);
+        font-size: 0; /* inline 요소(button)의 연속 배치로 인한 공백 제거  */
     }
-    .service .card_info .card div:before {
+    .btn_func:before {
         content: '';
         position: absolute; left: 50%; height: 100%;
         width: 1px; background: #bfc0c2;
     }
-    .service .card_info .card button {
+    .btn_func button {
         width: 50%; height: 45px;
         background: none;
         font-size: 15px; color: #666;
@@ -181,6 +182,71 @@
         font-size: 15px;
         color: #288bcc;
     }
+
+    .education {}
+    .education h3 {padding: 0 0 28px; font-size: 23px; color: #333; line-height: 1;}
+    .education span {color: #288bcc;}
+    .education .edu_wrap {
+        display: flex; justify-content: space-between; /* 주축 정렬 */
+    }
+    .education .edu_wrap .left {width: 580px;}
+    .education .edu_wrap .left a {
+        display: block; height: 544px; 
+        /* block 요소는 가로 100%로, a 요소의 부모 크기만큼 꽉 참 */
+        background: url(../img/img_thumb.jpg) no-repeat center / auto 100%;
+        border-radius: 4px; color: #fff;
+        box-sizing: border-box; /* 높이가 같이 있기 때문에 크기가 초과되지 않음 */
+        padding: 72px 50px; /* 상하좌우 균등 */
+    }
+    .education .edu_wrap .left a strong {
+        display: block; width: 330px; /* 너비를 주기 위해 display: block; */
+        font-size: 27px; line-height: 38px;
+        padding: 0 0 16px;
+    }
+    .education .edu_wrap .left a p {
+        width: 255px; font-size: 16px; line-height: 26px;
+        padding: 0 0 35px;
+    }
+    .education .edu_wrap .left a span {
+        display: block;
+        width: 140px; line-height: 40px; /* 줄 간격이 있으면 높이는 필요 없음 */ 
+        text-align: center; 
+        border: 1px solid #fff; border-radius: 6px; 
+        color: #fff; font-size: 13px;
+    }
+
+    .education .edu_wrap .right {width: 580px;}
+    .education .edu_wrap .right > div {position: relative;}
+    .education .edu_wrap .right > div ~ div {margin: 55px 0 0;}
+
+    .education .info_wrap {
+        display: flex; justify-content: space-between;
+        padding: 20px 0 0; border-top: 2px solid #333;
+    }
+    .education .info_wrap .img {
+        position: relative; width: 249px; height: 198px;
+        overflow: hidden; /* 이미지 범위 초과시 잘라내기 */
+    }
+    .education .info_wrap .img img {width: 100%; height: 100%;}
+    .education .info_wrap .info {width: 296px;}
+    .education .info_wrap .info a {
+        font-size: 23px; color: #333; 
+        /* 말 줄임표 */
+        display: block; /* 가로 크기 필요 */ width: 296px;
+        overflow: hidden; 
+        white-space: nowrap; /* 줄이 내려가는 것을 방지 */ 
+        text-overflow: ellipsis; 
+        
+        line-height: 1; /* 줄 간격 초기화 */ margin: 0 0 25px;
+    }
+    .education .info_wrap .info li {
+        font-size: 17px; color: #787878;
+        padding: 0 0 17px; line-height: 1;
+    }
+    .education .info_wrap .info li strong {
+        display: inline-block; /* 행 배치 */ width: 44px; color: #222;
+    }
+    .education .info_wrap .info p {font-size: 17px; color: #666;}
 
     .btn_more {
         position: absolute; right: 0; top: 0;
