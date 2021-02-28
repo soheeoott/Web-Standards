@@ -183,7 +183,7 @@
         color: #288bcc;
     }
 
-    .education {}
+    .education {padding: 0 0 104px;}
     .education h3 {padding: 0 0 28px; font-size: 23px; color: #333; line-height: 1;}
     .education span {color: #288bcc;}
     .education .edu_wrap {
@@ -217,7 +217,7 @@
 
     .education .edu_wrap .right {width: 580px;}
     .education .edu_wrap .right > div {position: relative;}
-    .education .edu_wrap .right > div ~ div {margin: 55px 0 0;}
+    .education .edu_wrap .right > div ~ div {margin: 53px 0 0;}
 
     .education .info_wrap {
         display: flex; justify-content: space-between;
@@ -247,6 +247,11 @@
         display: inline-block; /* 행 배치 */ width: 44px; color: #222;
     }
     .education .info_wrap .info p {font-size: 17px; color: #666;}
+
+    .trip {background: url(../img/travel.jpg) no-repeat center top;}
+    .trip .tit h2, 
+    .trip .tit p {color:#fff;}
+    .trip. trip_list > li {}
 
     .btn_more {
         position: absolute; right: 0; top: 0;
