@@ -282,7 +282,7 @@
     .trip .trip_list li.color1 a {background: #ed2626;}
     .trip .trip_list li.color2 strong span {color: #122e80;} /* 롯데관광색상 */
     .trip .trip_list li.color2 a {background: #122e80;}
-    .trip .trip_list li.color3 a {background: #288bcc;} /* 국내여행색상 */
+    .trip .trip_list li.color3 strong span {color: #288bcc;} /* 국내여행색상 */
     
     .btn_more {
         position: absolute; right: 0; top: 0;
