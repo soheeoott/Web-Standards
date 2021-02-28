@@ -248,11 +248,42 @@
     }
     .education .info_wrap .info p {font-size: 17px; color: #666;}
 
-    .trip {background: url(../img/travel.jpg) no-repeat center top;}
+    .trip {padding: 0 0 100px; background: url(../img/travel.jpg) no-repeat center top;}
     .trip .tit h2, 
     .trip .tit p {color:#fff;}
-    .trip. trip_list > li {}
-
+    .trip .trip_list {
+        display: flex;
+        /* flex - 행 배치 : 부모의 크기(clear) 만큼 */ /* 가로 크기를 주기 */
+        justify-content: space-between; /* 양쪽 맞춤 */
+        /* 왼, 오, 각각 양쪽으로 분리 후 사이의 여백이 동일하게 배치 */
+    } 
+    .trip .trip_list li {position: relative; width: 384px; height: 439px; background: #fff; border-radius: 5px; text-align: center;}
+    .trip .trip_list li .thumb {
+        width: 100%; /* 부모의 크기 만큼 꽉 채움 */
+        height: 212px; /* 좋은 방법은 아님 */
+        border-radius: 5px 5px 0 0;
+    }
+    .trip .trip_list li .mark {
+        position: absolute; /* 부모의 좌표에 따라 움직임 */
+        right: -10px; top: -24px;
+    }
+    .trip .trip_list li strong {
+        display: block; /* inline 요소(padding, margin(x)) -> block 요소 */
+        padding: 37px 0 15px; font-size: 24px; color: #333;
+        line-height: 1; /* 텍스트가 기본적으로 가지고 있는 줄 간격 초기화 */
+    }
+    .trip .trip_list li p {font-size: 18px; color: #666; line-height: 28px; padding: 0 0 20px;} 
+    /* br를 사용하면 센스 리더기를 사용할 경우 문장이 끊겨버림
+        위의 경우 너비값을 주어 두 줄로 만들 수 있지만 너비값이 다 다르므로 br로 사용 */
+    /* 포토샵으로 줄 간격 측정 : 텍스트의 윗변과 다음 줄의 윗변의 높이 */
+    .trip .trip_list li a {display: inline-block; width: 148px; line-height: 40px; color: #fff; font-size: 17px; border-radius: 5px;}
+    
+    .trip .trip_list li.color1 strong span {color: #ed2626;} /* 위메프색상 */
+    .trip .trip_list li.color1 a {background: #ed2626;}
+    .trip .trip_list li.color2 strong span {color: #122e80;} /* 롯데관광색상 */
+    .trip .trip_list li.color2 a {background: #122e80;}
+    .trip .trip_list li.color3 a {background: #288bcc;} /* 국내여행색상 */
+    
     .btn_more {
         position: absolute; right: 0; top: 0;
         width: 136px; line-height: 38px;
