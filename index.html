@@ -264,7 +264,7 @@
                 </div>
                 <div class="edu_wrap">
                     <div class="left">
-                        <h3>시니어플러스 센터 <span>무료대관</span> 예약</h3>
+                        <h3 class="h3">시니어플러스 센터 <span>무료대관</span> 예약</h3>
                         <a href="#">
                             <strong>시니어플러스에서 제공하는 무료대관 서비스</strong>
                             <p>
@@ -277,7 +277,7 @@
                     </div>
                     <div class="right">
                         <div>
-                           <h3><span>오프라인</span> 세미나 및 특강</h3>
+                           <h3 class="h3"><span>오프라인</span> 세미나 및 특강</h3>
                            <div class="info_wrap">
                                <div class="img">
                                    <img src="img/ethumb1.png" alt="부동산투자 최신 트렌드 2020부동산시장 전망 / 날짜 2019.11.14">
@@ -306,7 +306,7 @@
                             </a>
                         </div>
                         <div>
-                            <h3><span>온라인</span> 세미나 및 특강</h3>
+                            <h3 class="h3"><span>온라인</span> 세미나 및 특강</h3>
                             <div class="info_wrap">
                                <div class="img">
                                    <img src="img/ethumb2.png" alt="행복한 삶에는 와인이 필요하다.">
@@ -371,6 +371,107 @@
                         <a href="">바로가기</a>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <section class="block job">
+            <div class="clear">
+                <div class="tit">
+                    <h2>일자리 정보</h2>
+                </div>
+                
+                <!-- 상속이 없는 경우 바로 활용-->
+                <div class="left">
+                    <div class="h3">
+                        <span>시니어</span>채용정보
+                    </div>
+                    <ul class="job_info">
+                        <li>
+                            <a href="">
+                                <img src="img/logo_job1.jpg" alt="">
+                                <strong>굿커리어</strong>
+                                <!-- 
+                                    이미지의 대체 텍스트,
+                                    대체 콘텐츠
+                                    
+                                    똑같은 단어가 반복된다면 alt 속성에 값을
+                                    넣어 주지 않아도 됨
+                                    
+                                    alt 속성에 값을
+                                    넣지 않으면
+                                    글을 읽지 않고 스킵하지만,
+                                    
+                                    아예 기입하지 않을 경우
+                                    그저 그냥 그래픽이라고
+                                    읽힘
+                                -->
+                                <p>외국계 자동차 Automated</p>
+                                <span>D-30</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li>
+                            <a href="#">
+                                <img src="img/logo_job2.gif" alt="">
+                                <strong>(주)셀트리온스킨큐어</strong>
+                                <p>김태희화장품 셀트리온스킨</p>
+                                <span>D-30</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="#">
+                                <img src="img/logo_job1.jpg" alt="">
+                                <strong>굿커리어</strong>
+                                <p>석유화합대기업 리스크관리</p>
+                                <span>D-30</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn_more">자세히 보기<i class="xi-angle-right-thin"></i></a>
+                </div>
+                
+                <div class="right">
+                    <a href=""><img src="img/ad_job.png" alt=""></a>
+                </div>
+                <!-- 
+                    계속 바뀌는 값 -> img
+                    고정적인 값 -> background
+                -->
+                
+                <div class="customer">
+                    <h2 class="h3">
+                        <span>고객문의</span> 및 <em>해피콜</em>
+                    </h2>
+                    <p class="txt">
+                        (이 페이지에서 제공하는 내용에 대해 의견/문의를 남겨주시면 신속히 답변 드리겠습니다. <strong>해피콜 가능 시간 평일 10:00~17:00</strong>
+                    </p>
+                    <div class="form">
+                        <div>
+                            <label for="txt1_1">연락처</label>
+                            <select id="txt1_1" style="width: 84px;">
+                                <option>010</option>
+                            </select>
+                            <span>-</span>
+                            <!-- font-size : 0 -->
+                            <input type="tel" title="연락처 핸드폰 중간자리" style="width: 88px;">
+                            <span>-</span>
+                            <input type="tel" title="연락처 핸드폰 마지막자리" style="width: 88px;">
+                            <!-- 인라인 요소의 코드가 줄내림이 있으면 스페이스 한 칸이 생김 -->
+                        </div>
+                        <div>
+                            <label for="txt1_2">문의내용</label>
+                            <input type="text" id="txt1_2" placeholder="간단한 의견 및 문의내용을 기입해주세요. (500자 이내)" style="width: 431px;">
+                            <button>문의하기</button>
+                        </div>
+                    </div>
+                    <!-- 행으로 나누는 방법
+                            1. float, 2. flex
+                    -->
+                    <input type="checkbox" id="chk1_1" class="hide">
+                    <label for="chk1_1">개인정보 수집 및 이용에 동의합니다.</label>
+                    <a href="#">약관보기</a>
+                </div>
             </div>
         </section>
     </main>

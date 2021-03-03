@@ -184,8 +184,6 @@
     }
 
     .education {padding: 0 0 104px;}
-    .education h3 {padding: 0 0 28px; font-size: 23px; color: #333; line-height: 1;}
-    .education span {color: #288bcc;}
     .education .edu_wrap {
         display: flex; justify-content: space-between; /* 주축 정렬 */
     }
@@ -284,6 +282,121 @@
     .trip .trip_list li.color2 a {background: #122e80;}
     .trip .trip_list li.color3 strong span {color: #288bcc;} /* 국내여행색상 */
     
+    /* 일자리 정보 영역 */
+    .job .job_info {display: flex;}
+    .job .job_info li {
+        border-top: 2px solid #288bcc;
+        width: 285px;
+        padding: 0 30px;
+        margin: 0 21px 0 0;
+        box-sizing: border-box;
+        line-height: 1px;
+    }  /* 한줄에만 줄 간격 초기화 */
+    .job .job_info li img {
+        display: block; margin: 30px auto;
+    } 
+    
+    /* 
+        크기를 지정해 주지 않아도
+        img 는 자신만의 가로 크기를 알고 있기 때문에 
+        가운데 정렬이 적용 됨
+    */
+    .job .job_info li strong {
+        color: #333;
+        font-size: 20px;
+    }
+    .job .job_info li p {
+        color: #666;
+        font-size: 18px;
+        padding: 19px 0 47px;
+        position: relative;
+        
+        width: 225px; /* 100% x */
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    } /* block 요소 */ /* 선은 absolute - p 가 기준좌표 */
+    .job .job_info li p:after {
+        content: '';
+        position: absolute;
+        left: 0; bottom: 26px;
+        width: 36px; height: 1px;
+        background: #288bcc;
+    }
+    .job .job_info li span {
+        color: #55b9fe;
+        font-size: 12px;
+    } /* inline 요소는 위로 여백x */
+
+    .job .left {position: relative; float: left;}
+    .job .left .btn_more {right: 21px;}
+    .job .right {padding: 51px 0; float: right; margin-bottom: 100px;}
+    
+    .job .right img {border: 1px solid #e4e4e4;}
+    
+    .customer {clear: both; padding: 40px; border: 1px solid #aec6f1;} /* float 으로 인해 margin 이 적용이 되지 않음
+        float 영역에 margin */
+    .customer .h3 {float: left;}
+    .customer .txt {float: left; padding: 0 0 0 13px; font-size: 16px; color:  #666;}
+    .customer strong {}
+    .customer .form {
+        clear: both; display: flex; justify-content: space-between; font-size: 0;
+        padding: 0 0 27px;
+    }
+    .customer .form input,
+    .customer .form select {height: 50px; border: 1px solid #ddd; border-radius: 5px; background: #fafafa; font-size: 15px;}
+    .customer .form label {font-size: 15px; color: #333; padding: 0 14px 0 0;}
+    .customer .form input {padding: 0 0 0 20px;}
+    .customer .form input::webkit-input-placeholder {
+        font-size: 15px; color: #a9a9a9;   
+    }
+    .customer .form button {
+        width: 130px; height: 50px;
+        border-radius: 5px; background: #288bcc;
+        font-size: 15px; color: #fff; font-weight: bold;
+        margin: 0 0 0 5px; /* 배경색 유무 */
+    }
+    .customer .form button:after {
+        content: ""; 
+        display: inline-block;
+        margin: 0 0 0 10px; /* 배경과 선이 있으므로 */
+        background: url(../img/sArrow_next.png) no-repeat 0 0 / 100% auto;
+    } 
+        /* after 버튼의 마지막 자식 요소로 생성 
+            content: ""; 가 그 역할 (inline) */
+        /* 옆으로 붙으면서 가로-세로 : inline-block
+                text-align: center 가능 */
+    .customer .form span {
+        display: inline-block; width: 18px; 
+        text-align: center; line-height: 50px;
+        font-size: 15px;
+        vertical-align: middle;
+    } 
+    /* 가운데로 오지 않는 이유 
+            inline 요소 -> inline-block 
+                -> vertical-align: middle; 
+    */
+    .customer input[type="checkbox"] + label {
+        display: inline-block; height: 25px;
+        padding: 0 20px 0 29px; font-size: 16px;
+        color: #333; line-height: 25px;
+        background: url(../img/chk.png) no-repeat left;
+    }
+    /* + 인접 요소 연결자 */
+    /* label -> 인라인 요소 */
+    /* line-height 높이 + 텍스트 중간 배치 */
+    .customer input[type="checkbox"]:checked + label {
+        background-image: url(../img/chk_on.png) no-repeat;
+    }
+    /* :checked 가상 요소 선택자 */
+    .customer label + a {
+        font-size: 14px; color: #8b8b8b; text-decoration: underline; 
+        vertical-align: -2px; /* 개별 위치 제어 */
+    }
+    /* 줄간격 
+        -> display: inline-block, line-height: 25px;
+    */
+
     .btn_more {
         position: absolute; right: 0; top: 0;
         width: 136px; line-height: 38px;
@@ -293,3 +406,6 @@
     }
     .btn_more .xi-angle-right-thin {margin: 0 0 0 8px;}
     
+    .h3 {padding: 0 0 28px; font-size: 23px; color: #333; line-height: 1;}
+    .h3 span {color: #288bcc; width: 18px; text-align: center;}
+    .h3 em {color: #8a76b4; font-weight: bold;}
