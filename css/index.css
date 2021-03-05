@@ -372,14 +372,24 @@
         margin: 0 0 0 5px; 
         /* 배경색 유무 */
     }
+
+    .customer .form button i {
+        position: relative;
+        left: 5px;
+        top: 1px;
+    }
+
+    /*
     .customer .form button:after {
         content: ""; 
         display: inline-block;
         width: 22px;
         height: 11px;
-        background: url("../img/sArrow_next.png") no-repeat 0 0 / 100% auto;
-        margin: 0 0 0 10px; /* 배경과 선이 있으므로 */
+        background: url("../img/sBtn_next3.png") no-repeat 0 0 / 30% auto;
+        margin: 0 0 0 10px; 
+        // 배경과 선이 있으므로
     } 
+    */
         /* after 버튼의 마지막 자식 요소로 생성 
             content: ""; 가 그 역할 (inline) */
         /* 옆으로 붙으면서 가로-세로 : inline-block
@@ -432,7 +442,10 @@
     .slide_btm img {border: 1px solid #e3e3e3;}
 
     footer {background: #f5f5f5;}
-    footer.block > div {padding: 60px 0;} 
+    footer.block > div {
+        background: #f5f5f5;
+        padding: 60px 0;
+    } 
     /* .block > div 재활용 */
     /* 요소선택자로 공통된 영역 자체에서 옵션을 부여 */
     footer .top {
@@ -462,15 +475,15 @@
     /* 직접 부여하지 않으면 색상이 들어가지 않음 */
     footer .top select {
         font-size: 14px; color: #333;
-        width: 228px; height: 44px;
+        width: 230px; height: 44px;
         border: 1px solid #c4c4c4;
         background: #fff;
-        padding: 0 0 0 24px;
+        padding: 0 23px;
     }
     footer .btm {
         padding: 30px 0 0;
         display: flex; justify-content: space-between;
-        font-size: 14px;
+        font-size: 16px;
         color: #a8a8a8;
         line-height: 46px;
     }
