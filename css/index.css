@@ -423,6 +423,80 @@
     /* 줄간격 
         -> display: inline-block, line-height: 25px;
     */
+    
+    .slide_btm {
+        padding: 40px; 
+        font-size: 0; /* inline 요소 짤림 현상 해결 */
+    }
+    .slide_btm a {padding: 0 10px 0 0;}
+    .slide_btm img {border: 1px solid #e3e3e3;}
+
+    footer {background: #f5f5f5;}
+    footer.block > div {padding: 60px 0;} 
+    /* .block > div 재활용 */
+    /* 요소선택자로 공통된 영역 자체에서 옵션을 부여 */
+    footer .top {
+        display: flex; justify-content: space-between;
+        border-bottom: 1px solid #e4e4e4;
+        padding: 0 0 29px;
+    }
+    footer .top ul {display:inline-flex; padding: 0 0 0 38px;}
+    /* ul -> block = inline-flex */
+    footer .top li {padding: 0 17px; position: relative;}
+    footer .top li ~ li:after {
+        content: "";  position: absolute; left: 0; top: 50%; width: 1px; height: 13px; background: #d9d9d9; transform: translateY(-50%);
+    }
+    /* 
+        top: 50%; -> li 의 크기높이만큼
+        translateY(-50%); -> 자신의 크기의 반
+        li ~ li -> 형제 li
+        content -> inline 요소 : 가로 세로 반영 x
+        position: absolute; -> inline 요소를 block 요소로 변경
+    */
+    footer .top a {
+        font-size: 15px; color: #222;
+        display: block; 
+        line-height: 44px; /* block */
+    }
+    /* 링크는 css 를 직접 부여 */
+    /* 직접 부여하지 않으면 색상이 들어가지 않음 */
+    footer .top select {
+        font-size: 14px; color: #333;
+        width: 228px; height: 44px;
+        border: 1px solid #c4c4c4;
+        background: #fff;
+        padding: 0 0 0 24px;
+    }
+    footer .btm {
+        padding: 30px 0 0;
+        display: flex; justify-content: space-between;
+        font-size: 14px;
+        color: #a8a8a8;
+        line-height: 46px;
+    }
+    footer .btm ul {display: flex;}
+    footer .btm li {
+        padding: 0 0 0 12px;
+    }
+    footer .btm li a {
+        display: block;
+        width: 46px; height: 46px;
+        border-radius: 100%;
+    }
+    
+    /* sns -> 반 고정 컨텐츠 */
+    footer .btm li:nth-child(1) a {
+        background: url(../img/sns_3.png) no-repeat center;
+    }
+    footer .btm li:nth-child(2) a {
+        background: url(../img/sns_1.png) no-repeat center;
+    }
+    footer .btm li:nth-child(3) a {
+        background: url(../img/sns_2.png) no-repeat center;
+    }
+    footer .btm li:nth-child(4) a {
+        background: url(../img/sns_4.png) no-repeat center;
+    }
 
     .btn_more {
         position: absolute; right: 0; top: 0;
