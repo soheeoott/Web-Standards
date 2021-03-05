@@ -285,10 +285,10 @@
     /* 일자리 정보 영역 */
     .job .job_info {display: flex;}
     .job .job_info li {
-        border-top: 2px solid #288bcc;
-        width: 285px;
         padding: 0 30px;
         margin: 0 21px 0 0;
+        width: 285px;
+        border-top: 2px solid #288bcc;
         box-sizing: border-box;
         line-height: 1px;
     }  /* 한줄에만 줄 간격 초기화 */
@@ -334,41 +334,62 @@
     
     .job .right img {border: 1px solid #e4e4e4;}
     
-    .customer {clear: both; padding: 40px; border: 1px solid #aec6f1;} /* float 으로 인해 margin 이 적용이 되지 않음
-        float 영역에 margin */
+    .customer {
+        clear: both; padding: 40px; border: 1px solid #aec6f1;} 
+    /* float 으로 인해 margin 이 적용이 되지 않음 float 영역에 margin */
     .customer .h3 {float: left;}
-    .customer .txt {float: left; padding: 0 0 0 13px; font-size: 16px; color:  #666;}
+    .customer .txt {
+        float: left; padding: 0 0 0 13px; font-size: 15px; color: #666;
+    }
     .customer strong {}
     .customer .form {
         clear: both; display: flex; justify-content: space-between; font-size: 0;
         padding: 0 0 27px;
     }
     .customer .form input,
-    .customer .form select {height: 50px; border: 1px solid #ddd; border-radius: 5px; background: #fafafa; font-size: 15px;}
-    .customer .form label {font-size: 15px; color: #333; padding: 0 14px 0 0;}
-    .customer .form input {padding: 0 0 0 20px;}
-    .customer .form input::webkit-input-placeholder {
-        font-size: 15px; color: #a9a9a9;   
+    .customer .form select {
+        height: 50px; 
+        border: 1px solid #ddd; 
+        border-radius: 5px; 
+        background: #fafafa; 
+        font-size: 15px;
+    }
+    .customer .form label {
+        font-size: 15px; color: #333; padding: 0 14px 0 0;
+    }
+    .customer .form input {
+        padding: 0 0 0 20px;
+        box-sizing: border-box;
+    }
+    .customer .form input::-webkit-input-placeholder {
+        font-size: 15px; color: #a9a9a9; 
     }
     .customer .form button {
         width: 130px; height: 50px;
-        border-radius: 5px; background: #288bcc;
+        border-radius: 5px; 
+        background: #288bcc;
         font-size: 15px; color: #fff; font-weight: bold;
-        margin: 0 0 0 5px; /* 배경색 유무 */
+        margin: 0 0 0 5px; 
+        /* 배경색 유무 */
     }
     .customer .form button:after {
         content: ""; 
         display: inline-block;
+        width: 22px;
+        height: 11px;
+        background: url("../img/sArrow_next.png") no-repeat 0 0 / 100% auto;
         margin: 0 0 0 10px; /* 배경과 선이 있으므로 */
-        background: url(../img/sArrow_next.png) no-repeat 0 0 / 100% auto;
     } 
         /* after 버튼의 마지막 자식 요소로 생성 
             content: ""; 가 그 역할 (inline) */
         /* 옆으로 붙으면서 가로-세로 : inline-block
                 text-align: center 가능 */
+    
     .customer .form span {
-        display: inline-block; width: 18px; 
-        text-align: center; line-height: 50px;
+        display: inline-block; 
+        width: 18px; 
+        text-align: center; 
+        line-height: 50px;
         font-size: 15px;
         vertical-align: middle;
     } 
@@ -376,19 +397,25 @@
             inline 요소 -> inline-block 
                 -> vertical-align: middle; 
     */
+    
     .customer input[type="checkbox"] + label {
-        display: inline-block; height: 25px;
-        padding: 0 20px 0 29px; font-size: 16px;
-        color: #333; line-height: 25px;
-        background: url(../img/chk.png) no-repeat left;
+        display: inline-block; 
+        cursor: pointer;
+        padding: 0 20px 0 29px; 
+        font-size: 16px;
+        color: #333; 
+        line-height: 25px;
+        background: url("../img/chk.png") no-repeat left;
     }
+
+    /* :checked 가상 요소 선택자 */
+    .customer input[type="checkbox"]:checked + label {
+        background-image: url("../img/chk_on.png");
+    }
+
     /* + 인접 요소 연결자 */
     /* label -> 인라인 요소 */
     /* line-height 높이 + 텍스트 중간 배치 */
-    .customer input[type="checkbox"]:checked + label {
-        background-image: url(../img/chk_on.png) no-repeat;
-    }
-    /* :checked 가상 요소 선택자 */
     .customer label + a {
         font-size: 14px; color: #8b8b8b; text-decoration: underline; 
         vertical-align: -2px; /* 개별 위치 제어 */

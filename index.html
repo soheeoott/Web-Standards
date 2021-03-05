@@ -449,30 +449,98 @@
                     <div class="form">
                         <div>
                             <label for="txt1_1">연락처</label>
-                            <select id="txt1_1" style="width: 84px;">
+                            <select id="txt1_1" style="width: 104px;">
                                 <option>010</option>
                             </select>
                             <span>-</span>
                             <!-- font-size : 0 -->
-                            <input type="tel" title="연락처 핸드폰 중간자리" style="width: 88px;">
+                            <input type="tel" title="연락처 핸드폰 중간자리" style="width: 108px;">
                             <span>-</span>
-                            <input type="tel" title="연락처 핸드폰 마지막자리" style="width: 88px;">
+                            <input type="tel" title="연락처 핸드폰 마지막자리" style="width: 108px;">
                             <!-- 인라인 요소의 코드가 줄내림이 있으면 스페이스 한 칸이 생김 -->
                         </div>
                         <div>
                             <label for="txt1_2">문의내용</label>
-                            <input type="text" id="txt1_2" placeholder="간단한 의견 및 문의내용을 기입해주세요. (500자 이내)" style="width: 431px;">
+                            <input type="text" id="txt1_2" placeholder="간단한 의견 및 문의내용을 기입해주세요. (500자 이내)" style="width: 451px;">
                             <button>문의하기</button>
                         </div>
                     </div>
                     <!-- 행으로 나누는 방법
                             1. float, 2. flex
                     -->
-                    <input type="checkbox" id="chk1_1" class="hide">
+                    <input type="checkbox" id="chk1_1" class="hide">        <!--class="hide"-->
                     <label for="chk1_1">개인정보 수집 및 이용에 동의합니다.</label>
                     <a href="#">약관보기</a>
                 </div>
             </div>
+        </section>
+        <section>
+            <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+          <a href="">
+              <img src="img/ad1.png" alt="">
+          </a>
+      </div>
+      
+      <div class="swiper-slide">
+          <a href="">
+              <img src="img/ad2.jpg" alt="">
+          </a>
+      </div>
+      
+      <div class="swiper-slide">
+          <a href="">
+              <img src="img/ad3.jpg" alt="">
+          </a>
+      </div>
+      
+      <div class="swiper-slide">
+          <a href="">
+              <img src="img/ad4.jpg" alt="">
+          </a>
+      </div>
+      
+      <div class="swiper-slide">
+          <a href="">
+              <img src="img/ad5.jpg" alt="">
+          </a>
+      </div>
+      
+      <div class="swiper-slide">
+          <a href="">
+              <img src="img/ad6.jpg" alt="">
+          </a>
+      </div>
+      
+      <div class="swiper-slide">
+          <a href="">
+              <img src="img/ad1.png" alt="">
+          </a>
+      </div>
+      
+      <div class="swiper-slide">
+          <a href="">
+              <img src="img/ad2.jpg" alt="">
+          </a>
+      </div>
+      
+      <div class="swiper-slide">
+          <a href="">
+              <img src="img/ad3.jpg" alt="">
+          </a>
+      </div>
+    </div>
+  </div>
+       
+       <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 30, /* 한 쪽 방향 margin */
+    });
+  </script>
+       
         </section>
     </main>
 </body>
