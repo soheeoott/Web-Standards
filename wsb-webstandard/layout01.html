@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout01</title>
+    <style>
+        body { background: #c8e6c9; }
+        #wrap { width: 1000px; height: 900px; margin: 0 auto; font-size: 40px; color: #fff; text-align: center; text-transform: uppercase; }
+        #header { width: 1000px; height: 100px; line-height: 100px; background: #2e7d32; } /* W1000;*/
+        #nav { width: 1000px; height: 100px; line-height: 100px; background: #388e3c; }
+        #side { width: 300px; height: 600px; line-height: 600px; background: #43a047; float:left; }
+        #contents { width: 700px; height: 600px; line-height: 600px; background: #4caf50; float:left; }
+        /* 
+        float:left = height:0 으로 인식
+        footer에 float:left;
+        */
+        #footer { width: 1000px; height: 100px; line-height: 100px; background: #66bb6a; 
+        float:left; }
+        /* 
+        height: 100px; line-height: 100px; 
+        / line-height 값을 height 값과 동일하게 
+        / 내용이 1줄일 때 내용이 중앙으로 오는 효과 / 
+        */
+    </style>
+</head>
+<body>
+   <div id="wrap"> <!-- 전체를 감싸다 -->
+       <div id="header">header</div>
+       <div id="nav">nav</div>
+       <div id="side">side</div>
+       <div id="contents">contents</div>
+       <div id="footer">footer</div>
+   </div>
+</body>
+</html>
